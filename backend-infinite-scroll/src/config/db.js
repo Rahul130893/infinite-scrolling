@@ -1,9 +1,8 @@
 const mongoose = require("mongoose")
-
+require("dotenv").config()
+const db= process.env.MongoURI 
 const connect = () => {
-    return mongoose.connect(
-      "mongodb+srv://rahul12345:rahul12345@cluster0.xnru5.mongodb.net/infinite_scrolling?retryWrites=true&w=majority"
-    );
+    return mongoose.connect(db);
 }
 
 module.exports= connect
