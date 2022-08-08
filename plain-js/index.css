@@ -10,4 +10,8 @@
     height: 50px;
     text-align: center;
     margin: 20px auto;
+    background-color: whitesmoke;
+    color: brown;
+    font-family: monospace;
+    font-weight: 700;
 }

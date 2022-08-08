@@ -12,11 +12,25 @@ const list = async () => {
     append(data)
 }
 list()
+let i = 1;
+const append = (array) => {
+  array.forEach((e) => {
+    let text = document.createElement("p");
 
+    text.innerText = e.title + " " + `${i++}`;
+
+    let smalldiv = document.createElement("div");
+    smalldiv.append(text);
+    container.append(smalldiv);
+  });
+};
 const showData = () => {
+  
     setTimeout(() => {
+        
       page++
         list()
+       
     }, 300)
 }
 
@@ -27,16 +41,4 @@ window.addEventListener("scroll", () => {
         showData()
     }
 })
-let i = 1;
-const append = (array) => {
-       
-    array.forEach(e=> {
-        let text = document.createElement("p")
-     
-        text.innerText = e.title +" "+ `${i++}`
-        
-        let smalldiv = document.createElement("div")
-        smalldiv.append(text)
-        container.append(smalldiv)
-    });
-}
+
