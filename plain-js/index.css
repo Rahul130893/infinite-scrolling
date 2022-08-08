@@ -1,0 +1,13 @@
+#container{
+    border:1px solid red;
+    background-color: bisque;
+  
+}
+
+#container > div{
+    border:1px solid green;
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    margin: 20px auto;
+}
